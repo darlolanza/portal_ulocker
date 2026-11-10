@@ -538,7 +538,7 @@ main {
   width: 41px;
   height: 41px;
   stroke-width: 1.65;
-  color: #111;
+  color: var(--ink);
 }
 
 .step b {
