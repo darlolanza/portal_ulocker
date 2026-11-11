@@ -1,0 +1,35 @@
+name: Deploy Pages & Previews
+
+on:
+  push:
+    branches:
+      - '**'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Deploy to gh-pages branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: .
+          target-folder: ${{ github.ref_name == 'main' && '' || format('preview/{0}', github.ref_name) }}
+          clean: false
+
+      - name: Mostrar enlace en el resumen
+        run: |
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            echo "### 🚀 Sitio Principal publicado:" >> $GITHUB_STEP_SUMMARY
+            echo "https://darlolanza.github.io/portal_ulocker/" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### 🔍 Preview de rama '${{ github.ref_name }}' publicado:" >> $GITHUB_STEP_SUMMARY
+            echo "https://darlolanza.github.io/portal_ulocker/preview/${{ github.ref_name }}/" >> $GITHUB_STEP_SUMMARY
+          fi
+
