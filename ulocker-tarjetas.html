@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ULocker — Tarjetas</title>
+<style>
+/* Componente autónomo: estilos limitados a .ul-cards */
+.ul-cards{--orange:#E8501D;--blue:#002247;--black:#202020;box-sizing:border-box;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%;font-family:Arial,Helvetica,sans-serif}
+.ul-cards *{box-sizing:border-box}
+.ul-cards__card{position:relative;min-width:0;min-height:540px;padding:42px 32px 34px;display:flex;flex-direction:column;border-radius:0 76px 0 0;background:#FBE0D7;color:var(--blue)}
+.ul-cards__card::before{content:"";position:absolute;top:19px;left:21px;width:18px;height:18px;border-radius:50%;background:#fff}
+.ul-cards__card--orange{background:var(--orange);color:#fff}
+.ul-cards__card--gray{background:#E5EAF1}
+.ul-cards__card--blue{background:var(--blue);color:#fff}
+.ul-cards__content{display:flex;flex-direction:column;gap:23px;flex:1;padding-top:18px}
+.ul-cards__icon{width:58px;height:58px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ul-cards__card--peach .ul-cards__icon{color:var(--orange)}
+.ul-cards__card--gray .ul-cards__icon{color:var(--blue)}
+.ul-cards__title{font-size:clamp(23px,2vw,34px);line-height:1.08;letter-spacing:-.035em;margin:0;font-weight:800}
+.ul-cards__rule{width:65px;height:5px;background:var(--orange);border-radius:2px}
+.ul-cards__card--orange .ul-cards__rule{background:#fff}
+.ul-cards__desc{font-size:17px;line-height:1.5;margin:0;color:inherit}
+.ul-cards__steps{display:grid;gap:17px;margin:0;padding:0;list-style:none}
+.ul-cards__step{display:flex;gap:12px;align-items:flex-start}
+.ul-cards__num{flex:none;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:#fff;color:var(--orange);font-weight:800}
+.ul-cards__step strong{display:block;font-size:17px}
+.ul-cards__step span:last-child{font-size:15px;line-height:1.4}
+.ul-cards__link{align-self:flex-start;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;margin-top:32px;padding:10px 16px;border:2px solid currentColor;border-radius:999px;color:inherit;text-decoration:none;font-size:16px;font-weight:700;line-height:1.2;transition:background-color .2s,color .2s}
+.ul-cards__link:hover,.ul-cards__link:focus-visible{background:var(--blue);border-color:var(--blue);color:#fff}
+.ul-cards__card--blue .ul-cards__link{background:#fff;color:var(--blue);border-color:#fff}
+.ul-cards__card--orange .ul-cards__link:hover,.ul-cards__card--orange .ul-cards__link:focus-visible{background:#fff;color:var(--orange);border-color:#fff}
+.ul-cards__card--blue .ul-cards__link:hover,.ul-cards__card--blue .ul-cards__link:focus-visible{background:#e6eaf0}
+@media(max-width:1050px){.ul-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.ul-cards__card{min-height:480px}}
+@media(max-width:600px){.ul-cards{grid-template-columns:1fr}.ul-cards__card{min-height:390px;padding:38px 26px 28px;border-top-right-radius:64px}.ul-cards__title{font-size:29px}.ul-cards__content{gap:18px}}
+</style>
+</head>
+<body style="margin:0;padding:24px;background:#fff">
+<!-- Para insertar en un sitio existente, copiar el bloque <style> y el <section> siguiente. -->
+<section class="ul-cards" aria-label="Conocé ULocker">
+  <article class="ul-cards__card ul-cards__card--peach">
+    <div class="ul-cards__content">
+      <svg class="ul-cards__icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="18" width="46" height="35" rx="6"/><path d="M25 18v-6h14v6"/></svg>
+      <h2 class="ul-cards__title">Qué hacemos</h2>
+      <div class="ul-cards__rule" aria-hidden="true"></div>
+      <p class="ul-cards__desc">Diseñamos y desarrollamos soluciones de lockers que se adaptan a distintos usos y entornos, con una experiencia simple y autónoma.</p>
+    </div>
+    <!-- Agregar enlace cuando exista una página de destino. -->
+  </article>
+  <article class="ul-cards__card ul-cards__card--orange">
+    <div class="ul-cards__content">
+      <svg class="ul-cards__icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="13" width="46" height="42" rx="5"/><path d="M9 25h46M20 8v10M44 8v10"/></svg>
+      <h2 class="ul-cards__title">Cómo funciona</h2>
+      <div class="ul-cards__rule" aria-hidden="true"></div>
+      <ol class="ul-cards__steps">
+        <li class="ul-cards__step"><span class="ul-cards__num">1</span><span><strong>Reservá</strong>Elegí el tamaño y el tiempo.</span></li>
+        <li class="ul-cards__step"><span class="ul-cards__num">2</span><span><strong>Accedé</strong>Con tu código personal.</span></li>
+        <li class="ul-cards__step"><span class="ul-cards__num">3</span><span><strong>Guardá y seguí</strong>De forma segura y rápida.</span></li>
+      </ol>
+    </div>
+  </article>
+  <article class="ul-cards__card ul-cards__card--gray">
+    <div class="ul-cards__content">
+      <svg class="ul-cards__icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="17" y="17" width="30" height="30" rx="3"/><path d="M24 7v10M32 7v10M40 7v10M24 47v10M32 47v10M40 47v10M7 24h10M7 32h10M7 40h10M47 24h10M47 32h10M47 40h10"/></svg>
+      <h2 class="ul-cards__title">Desarrollo y tecnología</h2>
+      <div class="ul-cards__rule" aria-hidden="true"></div>
+      <p class="ul-cards__desc">Diseño, electrónica y software propio, con producción nacional y foco en la experiencia de uso.</p>
+    </div>
+    <!-- Reemplazar href con la URL definitiva -->
+    <a class="ul-cards__link" href="https://ulocker.ar/">Conocé más <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="ul-cards__card ul-cards__card--blue">
+    <div class="ul-cards__content">
+      <svg class="ul-cards__icon" viewBox="0 0 64 64" aria-hidden="true"><path d="m6 25 12-10 13 8 13-8 14 10-13 20-13 8-14-8L6 25Z"/><path d="m18 15 12 18c3 4 7 3 9 0l4-4M20 42l7 8M27 37l10 12M35 34l10 11"/></svg>
+      <h2 class="ul-cards__title">Franquicias y alianzas</h2>
+      <div class="ul-cards__rule" aria-hidden="true"></div>
+      <p class="ul-cards__desc">Llevá la experiencia ULocker a tu ciudad o sumate como aliado estratégico.</p>
+    </div>
+    <!-- Reemplazar href con la URL definitiva -->
+    <a class="ul-cards__link" href="https://ulocker.ar/">Conocé oportunidades <span aria-hidden="true">→</span></a>
+  </article>
+</section>
+</body>
+</html>

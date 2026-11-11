@@ -580,6 +580,225 @@ main {
 }
 
 /* ==========================================================================
+   8b. Tarjetas ULocker (Qué hacemos, Cómo funciona, Tecnología, Franquicias)
+   ========================================================================== */
+.ul-cards {
+  --orange: #E8501D;
+  --blue: #002247;
+  --black: #202020;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 24px 18px 10px;
+  font-family: inherit;
+}
+
+.ul-cards * {
+  box-sizing: border-box;
+}
+
+.ul-cards__card {
+  position: relative;
+  min-width: 0;
+  min-height: 540px;
+  padding: 42px 32px 34px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 76px 0 0;
+  background: #FBE0D7;
+  color: var(--blue);
+  scroll-margin-top: 105px;
+}
+
+.ul-cards__card::before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 21px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.ul-cards__card--orange {
+  background: var(--orange);
+  color: #fff;
+}
+
+.ul-cards__card--gray {
+  background: #E5EAF1;
+}
+
+.ul-cards__card--blue {
+  background: var(--blue);
+  color: #fff;
+}
+
+.ul-cards__content {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  flex: 1;
+  padding-top: 18px;
+}
+
+.ul-cards__icon {
+  width: 58px;
+  height: 58px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ul-cards__card--peach .ul-cards__icon {
+  color: var(--orange);
+}
+
+.ul-cards__card--gray .ul-cards__icon {
+  color: var(--blue);
+}
+
+.ul-cards__title {
+  font-size: clamp(23px, 2vw, 34px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  margin: 0;
+  font-weight: 800;
+}
+
+.ul-cards__rule {
+  width: 65px;
+  height: 5px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+.ul-cards__card--orange .ul-cards__rule {
+  background: #fff;
+}
+
+.ul-cards__desc {
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0;
+  color: inherit;
+}
+
+.ul-cards__steps {
+  display: grid;
+  gap: 17px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ul-cards__step {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.ul-cards__num {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--orange);
+  font-weight: 800;
+}
+
+.ul-cards__step strong {
+  display: block;
+  font-size: 17px;
+}
+
+.ul-cards__step span:last-child {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.ul-cards__link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-top: 32px;
+  padding: 10px 16px;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.ul-cards__link:hover,
+.ul-cards__link:focus-visible {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+.ul-cards__card--blue .ul-cards__link {
+  background: #fff;
+  color: var(--blue);
+  border-color: #fff;
+}
+
+.ul-cards__card--orange .ul-cards__link:hover,
+.ul-cards__card--orange .ul-cards__link:focus-visible {
+  background: #fff;
+  color: var(--orange);
+  border-color: #fff;
+}
+
+.ul-cards__card--blue .ul-cards__link:hover,
+.ul-cards__card--blue .ul-cards__link:focus-visible {
+  background: #e6eaf0;
+}
+
+@media (max-width: 1050px) {
+  .ul-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ul-cards__card {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ul-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ul-cards__card {
+    min-height: 390px;
+    padding: 38px 26px 28px;
+    border-top-right-radius: 64px;
+  }
+
+  .ul-cards__title {
+    font-size: 29px;
+  }
+
+  .ul-cards__content {
+    gap: 18px;
+  }
+}
+
+/* ==========================================================================
    9. Footer & Barra Móvil CTA
    ========================================================================== */
 .footer {
@@ -676,6 +895,11 @@ main {
     margin-right: 18px;
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .ul-cards {
+    margin-left: 18px;
+    margin-right: 18px;
   }
 
   .footer {
@@ -781,6 +1005,11 @@ main {
     margin-right: 12px;
     padding-left: 13px;
     padding-right: 13px;
+  }
+
+  .ul-cards {
+    margin-left: 12px;
+    margin-right: 12px;
   }
 
   .footer {
@@ -1029,7 +1258,8 @@ main {
   }
 
   .row-section,
-  .steps {
+  .steps,
+  .ul-cards {
     margin-left: 19px;
     margin-right: 19px;
   }
@@ -1204,4 +1434,3 @@ main {
     transition: none;
   }
 }
-

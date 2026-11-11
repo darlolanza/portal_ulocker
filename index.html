@@ -146,56 +146,49 @@
         </section>
       </div>
 
-      <!-- Sección Qué Hacemos (Empresa) -->
-      <section class="row-section about" id="empresa" aria-labelledby="aboutTitle">
-        <h2 id="aboutTitle">Qué hacemos</h2>
-        <p>Diseñamos y desarrollamos soluciones de lockers que se adaptan a distintos usos y entornos, con una experiencia de uso simple y autónoma.</p>
-      </section>
-
-      <!-- Sección Cómo Funciona -->
-      <section class="steps tinted" id="funcionamiento" aria-labelledby="stepsTitle">
-        <h2 id="stepsTitle">Cómo funciona</h2>
-        <div class="step">
-          <svg class="icon"><use href="#i-calendar"/></svg>
-          <div>
-            <b>1. Reservá</b>
-            <small>Elegí el tamaño y el tiempo.</small>
+      <!-- Componente de Tarjetas (Qué hacemos, Cómo funciona, Tecnología, Franquicias) -->
+      <section class="ul-cards" aria-label="Conocé ULocker">
+        <article class="ul-cards__card ul-cards__card--peach" id="empresa">
+          <div class="ul-cards__content">
+            <svg class="ul-cards__icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="18" width="46" height="35" rx="6"/><path d="M25 18v-6h14v6"/></svg>
+            <h2 class="ul-cards__title">Qué hacemos</h2>
+            <div class="ul-cards__rule" aria-hidden="true"></div>
+            <p class="ul-cards__desc">Diseñamos y desarrollamos soluciones de lockers que se adaptan a distintos usos y entornos, con una experiencia simple y autónoma.</p>
           </div>
-        </div>
-        <div class="step">
-          <svg class="icon"><use href="#i-lock"/></svg>
-          <div>
-            <b>2. Accedé</b>
-            <small>Con tu código personal.</small>
-          </div>
-        </div>
-        <div class="step">
-          <svg class="icon"><use href="#i-bag"/></svg>
-          <div>
-            <b>3. Guardá y seguí</b>
-            <small>De forma segura y rápida.</small>
-          </div>
-        </div>
-      </section>
+        </article>
 
-      <!-- Sección Tecnología -->
-      <section class="row-section tech" id="tecnologia" aria-labelledby="techTitle">
-        <h2 id="techTitle">Desarrollo y tecnología</h2>
-        <p>Diseño, electrónica y software propio, con producción nacional y foco en la experiencia de uso.</p>
-        <a class="button button-outline" href="#contacto">
-          Conocé más
-          <svg class="icon" style="width:19px;height:19px"><use href="#i-arrow"/></svg>
-        </a>
-      </section>
+        <article class="ul-cards__card ul-cards__card--orange" id="funcionamiento">
+          <div class="ul-cards__content">
+            <svg class="ul-cards__icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="13" width="46" height="42" rx="5"/><path d="M9 25h46M20 8v10M44 8v10"/></svg>
+            <h2 class="ul-cards__title">Cómo funciona</h2>
+            <div class="ul-cards__rule" aria-hidden="true"></div>
+            <ol class="ul-cards__steps">
+              <li class="ul-cards__step"><span class="ul-cards__num">1</span><span><strong>Reservá</strong>Elegí el tamaño y el tiempo.</span></li>
+              <li class="ul-cards__step"><span class="ul-cards__num">2</span><span><strong>Accedé</strong>Con tu código personal.</span></li>
+              <li class="ul-cards__step"><span class="ul-cards__num">3</span><span><strong>Guardá y seguí</strong>De forma segura y rápida.</span></li>
+            </ol>
+          </div>
+        </article>
 
-      <!-- Sección Franquicias -->
-      <section class="row-section franchises tinted" id="franquicias" aria-labelledby="franchiseTitle">
-        <h2 id="franchiseTitle">Franquicias y alianzas</h2>
-        <p>Llevá la experiencia ULocker a tu ciudad o sumate como aliado estratégico.</p>
-        <a class="button button-outline" href="#contacto">
-          Conocé oportunidades
-          <svg class="icon" style="width:19px;height:19px"><use href="#i-arrow"/></svg>
-        </a>
+        <article class="ul-cards__card ul-cards__card--gray" id="tecnologia">
+          <div class="ul-cards__content">
+            <svg class="ul-cards__icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="17" y="17" width="30" height="30" rx="3"/><path d="M24 7v10M32 7v10M40 7v10M24 47v10M32 47v10M40 47v10M7 24h10M7 32h10M7 40h10M47 24h10M47 32h10M47 40h10"/></svg>
+            <h2 class="ul-cards__title">Desarrollo y tecnología</h2>
+            <div class="ul-cards__rule" aria-hidden="true"></div>
+            <p class="ul-cards__desc">Diseño, electrónica y software propio, con producción nacional y foco en la experiencia de uso.</p>
+          </div>
+          <a class="ul-cards__link" href="https://ulocker.ar/" target="_blank" rel="noopener noreferrer">Conocé más <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="ul-cards__card ul-cards__card--blue" id="franquicias">
+          <div class="ul-cards__content">
+            <svg class="ul-cards__icon" viewBox="0 0 64 64" aria-hidden="true"><path d="m6 25 12-10 13 8 13-8 14 10-13 20-13 8-14-8L6 25Z"/><path d="m18 15 12 18c3 4 7 3 9 0l4-4M20 42l7 8M27 37l10 12M35 34l10 11"/></svg>
+            <h2 class="ul-cards__title">Franquicias y alianzas</h2>
+            <div class="ul-cards__rule" aria-hidden="true"></div>
+            <p class="ul-cards__desc">Llevá la experiencia ULocker a tu ciudad o sumate como aliado estratégico.</p>
+          </div>
+          <a class="ul-cards__link" href="https://ulocker.ar/" target="_blank" rel="noopener noreferrer">Conocé oportunidades <span aria-hidden="true">→</span></a>
+        </article>
       </section>
     </main>
 
