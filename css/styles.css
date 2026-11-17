@@ -269,7 +269,7 @@ main {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
   grid-template-areas: "intro solutions";
-  column-gap: 55px;
+  column-gap: 45px;
   row-gap: 24px;
   padding: 44px 0 34px;
   border-left: 1.5px solid var(--orange);
@@ -277,12 +277,12 @@ main {
   border-bottom: 1.5px solid var(--orange);
   border-top: none;
   border-radius: 0 0 24px 24px;
-  margin-bottom: 24px;
+  margin: 0 18px 24px;
 }
 
 .intro-copy {
   grid-area: intro;
-  padding: 11px 0 5px 36px;
+  padding: 11px 0 5px 16px;
   min-width: 0;
 }
 
@@ -321,7 +321,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 0 26px 0 0;
+  padding: 0 16px 0 0;
 }
 
 .solution-card {
@@ -959,8 +959,17 @@ main {
     padding-right: 34px;
   }
 
+  .top-block {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
   .intro-copy {
-    padding-left: 34px;
+    padding-left: 16px;
+  }
+
+  .solution-links {
+    padding-right: 16px;
   }
 
   .booking {
@@ -1021,10 +1030,12 @@ main {
 
   .top-block {
     column-gap: 25px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
 
   .intro-copy {
-    padding-left: 25px;
+    padding-left: 13px;
   }
 
   .intro-copy h1 {
@@ -1032,7 +1043,7 @@ main {
   }
 
   .solution-links {
-    padding-right: 10px;
+    padding-right: 13px;
   }
 
   .solution-title {
