@@ -268,17 +268,21 @@ main {
 .top-block {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-  grid-template-areas:
-    "intro solutions"
-    "booking booking";
-  column-gap: 55px;
+  grid-template-areas: "intro solutions";
+  column-gap: 45px;
   row-gap: 24px;
-  padding: 47px 0 9px;
+  padding: 44px 0 34px;
+  border-left: 1.5px solid var(--orange);
+  border-right: 1.5px solid var(--orange);
+  border-bottom: 1.5px solid var(--orange);
+  border-top: none;
+  border-radius: 0 0 24px 24px;
+  margin: 0 18px 24px;
 }
 
 .intro-copy {
   grid-area: intro;
-  padding: 11px 0 5px 36px;
+  padding: 11px 0 5px 16px;
   min-width: 0;
 }
 
@@ -317,7 +321,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 0 26px 0 0;
+  padding: 0 16px 0 0;
 }
 
 .solution-card {
@@ -404,7 +408,6 @@ main {
    7. Bloque de Reserva (Booking)
    ========================================================================== */
 .booking {
-  grid-area: booking;
   display: grid;
   grid-template-columns: 94px 1fr auto;
   align-items: center;
@@ -412,7 +415,7 @@ main {
   border-radius: var(--radius);
   background: var(--orange-soft);
   padding: 23px 24px 24px 34px;
-  margin: 0;
+  margin: 0 0 24px;
   scroll-margin-top: 95px;
 }
 
@@ -956,8 +959,17 @@ main {
     padding-right: 34px;
   }
 
+  .top-block {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
   .intro-copy {
-    padding-left: 34px;
+    padding-left: 16px;
+  }
+
+  .solution-links {
+    padding-right: 16px;
   }
 
   .booking {
@@ -1018,10 +1030,12 @@ main {
 
   .top-block {
     column-gap: 25px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
 
   .intro-copy {
-    padding-left: 25px;
+    padding-left: 13px;
   }
 
   .intro-copy h1 {
@@ -1029,7 +1043,7 @@ main {
   }
 
   .solution-links {
-    padding-right: 10px;
+    padding-right: 13px;
   }
 
   .solution-title {
@@ -1228,10 +1242,11 @@ main {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "intro"
-      "booking"
       "solutions";
     gap: 20px;
-    padding: 25px 19px 0;
+    padding: 25px 19px 24px;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 24px;
   }
 
   .intro-copy {
