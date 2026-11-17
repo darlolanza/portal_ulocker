@@ -1,0 +1,1530 @@
+/**
+ * ULocker - Portal Web Responsive
+ * Hoja de estilos principal
+ */
+
+/* ==========================================================================
+   1. Variables & Configuración de Tema
+   ========================================================================== */
+:root {
+  --orange: #E8501D;
+  --orange-soft: rgba(232, 80, 29, 0.2);
+  /* #E8501D33 */
+  --navy: #002247;
+  --navy-soft: rgba(0, 34, 71, 0.23);
+  /* #0022473B */
+  --ink: #202020;
+  --body: #152038;
+  --line: #d6d9de;
+  --white: #ffffff;
+  --radius: 17px;
+}
+
+/* ==========================================================================
+   2. Reset & Estilos Base
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #f7f7f7;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Enfoque accesible */
+.button:focus-visible,
+.menu-toggle:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 4px;
+}
+
+/* ==========================================================================
+   3. Estructura & Contenedores
+   ========================================================================== */
+.site {
+  max-width: 1250px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: 0 5px 32px rgba(0, 0, 0, 0.06);
+  padding: 0 31px;
+}
+
+.inner {
+  max-width: 1188px;
+  margin: auto;
+}
+
+/* Íconos SVG */
+.icon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 1.85;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+  flex: none;
+}
+
+.icon-lg {
+  width: 42px;
+  height: 42px;
+}
+
+.icon-xl {
+  width: 71px;
+  height: 71px;
+}
+
+/* ==========================================================================
+   4. Botones
+   ========================================================================== */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  border: 1.5px solid transparent;
+  border-radius: 12px;
+  min-height: 45px;
+  padding: 11px 21px;
+  font-size: 15px;
+  font-weight: 760;
+  line-height: 1.15;
+  white-space: nowrap;
+  transition: background 0.17s ease, color 0.17s ease, transform 0.17s ease, border-color 0.17s ease;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button-orange {
+  background: var(--orange);
+  color: #fff;
+}
+
+.button-orange:hover {
+  background: #ca4216;
+}
+
+.button-outline {
+  border-color: var(--navy);
+  color: var(--navy);
+  background: white;
+}
+
+.button-outline:hover {
+  background: #f2f5f8;
+}
+
+/* ==========================================================================
+   5. Encabezado & Navegación
+   ========================================================================== */
+.header {
+  min-height: 98px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 13px 22px;
+  position: relative;
+  z-index: 20;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+}
+
+.logo {
+  width: 157px;
+  height: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 43px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+.nav a,
+.nav details summary {
+  font-size: 15px;
+  font-weight: 750;
+  letter-spacing: -0.3px;
+  cursor: pointer;
+}
+
+.nav a:hover,
+.nav details summary:hover {
+  color: var(--orange);
+}
+
+.nav details {
+  position: relative;
+}
+
+.nav summary {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: 35px;
+  left: -18px;
+  z-index: 30;
+  min-width: 190px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.nav-dropdown a {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.nav-dropdown a:hover {
+  background: var(--orange-soft);
+}
+
+.nav-book .icon {
+  width: 21px;
+  height: 21px;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  padding: 9px;
+  border-radius: 8px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* ==========================================================================
+   6. Hero & Soluciones (Bloque Superior)
+   ========================================================================== */
+main {
+  padding-top: 0;
+}
+
+.top-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  grid-template-areas:
+    "intro solutions"
+    "booking booking";
+  column-gap: 55px;
+  row-gap: 24px;
+  padding: 47px 0 9px;
+}
+
+.intro-copy {
+  grid-area: intro;
+  padding: 11px 0 5px 36px;
+  min-width: 0;
+}
+
+.intro-copy h1 {
+  font-size: clamp(39px, 4.45vw, 60px);
+  line-height: 1.01;
+  letter-spacing: -2.5px;
+  font-weight: 820;
+  margin: 0 0 20px;
+  max-width: 660px;
+}
+
+.lead {
+  font-size: clamp(17px, 1.52vw, 20px);
+  line-height: 1.35;
+  letter-spacing: -0.35px;
+  color: var(--body);
+  max-width: 640px;
+  margin: 0 0 22px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  flex-wrap: wrap;
+}
+
+.hero-actions .button {
+  min-width: 195px;
+}
+
+/* Tarjetas de Soluciones */
+.solution-links {
+  grid-area: solutions;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 26px 0 0;
+}
+
+.solution-card {
+  display: grid;
+  grid-template-columns: 7px minmax(0, 1fr) 30px;
+  align-items: center;
+  column-gap: 18px;
+  min-height: 112px;
+  padding: 13px 14px;
+  color: var(--navy);
+  background: var(--orange-soft);
+  border-radius: 14px;
+}
+
+.solution-card+.solution-card {
+  border-top: 0;
+  padding-top: 13px;
+}
+
+.solution-bar {
+  align-self: stretch;
+  width: 7px;
+  max-height: 83px;
+  border-radius: 6px;
+  background: var(--orange);
+}
+
+.industrial {
+  background: var(--navy-soft);
+}
+
+.industrial .solution-bar {
+  background: var(--navy);
+}
+
+.solution-card-content {
+  min-width: 0;
+}
+
+.solution-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 770;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.solution-title img {
+  width: 32px;
+  height: auto;
+  object-fit: contain;
+}
+
+.solution-title .suffix {
+  color: var(--orange);
+}
+
+.industrial .solution-title .suffix {
+  color: var(--navy);
+}
+
+.solution-card p {
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 8px 0 0;
+  color: var(--body);
+  letter-spacing: -0.2px;
+}
+
+.solution-arrow {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.15s ease;
+}
+
+.solution-card:hover .solution-arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   7. Bloque de Reserva (Booking)
+   ========================================================================== */
+.booking {
+  grid-area: booking;
+  display: grid;
+  grid-template-columns: 94px 1fr auto;
+  align-items: center;
+  gap: 30px;
+  border-radius: var(--radius);
+  background: var(--orange-soft);
+  padding: 23px 24px 24px 34px;
+  margin: 0;
+  scroll-margin-top: 95px;
+}
+
+.booking-icon {
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid var(--orange);
+  height: 76px;
+  padding-right: 26px;
+}
+
+.booking-icon .icon {
+  width: 67px;
+  height: 67px;
+  stroke-width: 1.6;
+}
+
+.booking-body h2 {
+  font-size: 29px;
+  line-height: 1.08;
+  letter-spacing: -1px;
+  margin: 0 0 8px;
+  font-weight: 790;
+  color: var(--navy);
+}
+
+.booking-body p {
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+  margin: 0;
+  color: var(--body);
+}
+
+.booking .button {
+  min-width: 270px;
+  font-size: 18px;
+  min-height: 58px;
+  border-radius: 12px;
+  padding: 14px 25px;
+}
+
+.booking .button .icon {
+  width: 25px;
+  height: 25px;
+}
+
+/* ==========================================================================
+   8. Secciones de Contenido (Empresa, Pasos, Tecnología, Franquicias)
+   ========================================================================== */
+.row-section {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  align-items: center;
+  gap: 34px;
+  min-height: 95px;
+  padding: 14px 34px;
+  scroll-margin-top: 105px;
+}
+
+.row-section h2 {
+  font-size: 25px;
+  line-height: 1.08;
+  letter-spacing: -0.75px;
+  font-weight: 770;
+  margin: 0;
+  color: var(--navy);
+}
+
+.row-section p {
+  font-size: 16.5px;
+  line-height: 1.35;
+  letter-spacing: -0.22px;
+  color: var(--body);
+  margin: 0;
+  max-width: 620px;
+}
+
+.about {
+  margin-top: 4px;
+}
+
+.about p {
+  border-left: 1px solid var(--line);
+  padding-left: 34px;
+}
+
+.tinted {
+  background: var(--orange-soft);
+  border-radius: var(--radius);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: 280px repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 0;
+  padding: 19px 34px;
+  min-height: 94px;
+  margin-top: 0;
+  scroll-margin-top: 105px;
+}
+
+.steps h2 {
+  font-size: 25px;
+  color: var(--navy);
+  letter-spacing: -0.75px;
+  line-height: 1.05;
+  margin: 0;
+  font-weight: 770;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 2px 18px 2px 28px;
+  border-left: 1px solid rgba(0, 34, 71, 0.25);
+  min-height: 44px;
+}
+
+.step .icon {
+  width: 41px;
+  height: 41px;
+  stroke-width: 1.65;
+  color: var(--ink);
+}
+
+.step b {
+  display: block;
+  font-size: 16px;
+  white-space: nowrap;
+  letter-spacing: -0.3px;
+  color: var(--navy);
+}
+
+.step small {
+  display: block;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: var(--body);
+  margin-top: 3px;
+}
+
+.tech,
+.franchises {
+  grid-template-columns: 290px minmax(0, 1fr) 250px;
+  min-height: 100px;
+  gap: 30px;
+  margin-top: 8px;
+}
+
+.tech h2,
+.franchises h2 {
+  max-width: 210px;
+}
+
+.row-section .button {
+  min-width: 180px;
+  justify-self: end;
+}
+
+.franchises .button {
+  min-width: 239px;
+}
+
+/* ==========================================================================
+   8b. Tarjetas ULocker (Qué hacemos, Cómo funciona, Tecnología, Franquicias)
+   ========================================================================== */
+.ul-cards {
+  --orange: #E8501D;
+  --blue: #002247;
+  --black: #202020;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 18px 10px;
+  font-family: inherit;
+}
+
+.ul-cards * {
+  box-sizing: border-box;
+}
+
+.ul-cards__card {
+  position: relative;
+  min-width: 0;
+  min-height: 380px;
+  padding: 34px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 48px 0 0;
+  background: #ffffff;
+  color: var(--blue);
+  border: 1.5px solid var(--line);
+  scroll-margin-top: 105px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.ul-cards__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 34, 71, 0.06);
+}
+
+.ul-cards__card::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  opacity: 0.35;
+  background: transparent;
+}
+
+/* Identidad de bordes y acentos por tarjeta */
+.ul-cards__card--peach {
+  border-color: rgba(232, 80, 29, 0.28);
+}
+
+.ul-cards__card--peach:hover {
+  border-color: var(--orange);
+}
+
+.ul-cards__card--peach .ul-cards__icon {
+  color: var(--orange);
+}
+
+.ul-cards__card--orange {
+  border-color: rgba(232, 80, 29, 0.45);
+}
+
+.ul-cards__card--orange:hover {
+  border-color: var(--orange);
+}
+
+.ul-cards__card--orange .ul-cards__icon {
+  color: var(--orange);
+}
+
+.ul-cards__card--orange .ul-cards__rule {
+  background: var(--orange);
+}
+
+.ul-cards__card--gray {
+  border-color: rgba(0, 34, 71, 0.2);
+}
+
+.ul-cards__card--gray:hover {
+  border-color: var(--blue);
+}
+
+.ul-cards__card--gray .ul-cards__icon {
+  color: var(--blue);
+}
+
+.ul-cards__card--gray .ul-cards__rule {
+  background: var(--blue);
+}
+
+.ul-cards__card--blue {
+  border-color: rgba(0, 34, 71, 0.35);
+}
+
+.ul-cards__card--blue:hover {
+  border-color: var(--blue);
+}
+
+.ul-cards__card--blue .ul-cards__icon {
+  color: var(--blue);
+}
+
+.ul-cards__card--blue .ul-cards__rule {
+  background: var(--blue);
+}
+
+.ul-cards__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  padding-top: 10px;
+}
+
+.ul-cards__icon {
+  width: 44px;
+  height: 44px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ul-cards__title {
+  font-size: clamp(20px, 1.6vw, 26px);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin: 0;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.ul-cards__rule {
+  width: 46px;
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+.ul-cards__desc {
+  font-size: 15px;
+  line-height: 1.48;
+  margin: 0;
+  color: var(--body);
+}
+
+.ul-cards__steps {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ul-cards__step {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.ul-cards__num {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--orange-soft);
+  color: var(--orange);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.ul-cards__step strong {
+  display: block;
+  font-size: 15px;
+  color: var(--blue);
+}
+
+.ul-cards__step span:last-child {
+  font-size: 13.5px;
+  line-height: 1.35;
+  color: var(--body);
+}
+
+.ul-cards__link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1.5px solid var(--blue);
+  border-radius: 999px;
+  color: var(--blue);
+  background: transparent;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.ul-cards__link:hover,
+.ul-cards__link:focus-visible {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+@media (max-width: 1050px) {
+  .ul-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .ul-cards__card {
+    min-height: 330px;
+  }
+}
+
+@media (max-width: 780px) {
+  .ul-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ul-cards__card {
+    min-height: 0;
+    padding: 22px 18px 18px;
+    border-radius: 0 36px 0 0;
+  }
+
+  .ul-cards__card:hover {
+    transform: none;
+  }
+
+  .ul-cards__card::before {
+    top: 13px;
+    left: 15px;
+    width: 11px;
+    height: 11px;
+    border-width: 1.5px;
+  }
+
+  .ul-cards__content {
+    gap: 10px;
+    padding-top: 4px;
+  }
+
+  .ul-cards__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ul-cards__title {
+    font-size: 19px;
+    letter-spacing: -0.4px;
+  }
+
+  .ul-cards__rule {
+    width: 36px;
+    height: 3px;
+  }
+
+  .ul-cards__desc {
+    font-size: 13.5px;
+    line-height: 1.4;
+  }
+
+  .ul-cards__steps {
+    gap: 9px;
+  }
+
+  .ul-cards__step {
+    gap: 9px;
+  }
+
+  .ul-cards__num {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .ul-cards__step strong {
+    font-size: 13.5px;
+  }
+
+  .ul-cards__step span:last-child {
+    font-size: 12.5px;
+    line-height: 1.35;
+  }
+
+  .ul-cards__link {
+    margin-top: 12px;
+    min-height: 36px;
+    padding: 7px 16px;
+    font-size: 13.5px;
+  }
+}
+
+/* ==========================================================================
+   9. Footer & Barra Móvil CTA
+   ========================================================================== */
+.footer {
+  display: grid;
+  grid-template-columns: 255px 190px repeat(4, minmax(0, 1fr));
+  align-items: start;
+  column-gap: 22px;
+  border-top: 1px solid var(--line);
+  margin-top: 23px;
+  padding: 25px 34px 28px;
+}
+
+.footer .logo {
+  width: 142px;
+}
+
+.footer-desc {
+  border-left: 1px solid var(--line);
+  padding: 8px 0 8px 34px;
+  min-height: 65px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--body);
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12.5px;
+}
+
+.footer-col b {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.footer-col a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+.footnote {
+  font-size: 11px;
+  color: #626a78;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px 22px;
+}
+
+.mobile-bottom-cta {
+  display: none;
+}
+
+/* ==========================================================================
+   10. Alineación Editorial Desktop (>1100px)
+   ========================================================================== */
+@media (min-width: 1101px) {
+  .header {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .intro-copy {
+    padding-left: 34px;
+  }
+
+  .booking {
+    margin-left: 18px;
+    margin-right: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .booking-icon {
+    justify-content: flex-start;
+    padding-right: 16px;
+  }
+
+  .row-section {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .steps {
+    margin-left: 18px;
+    margin-right: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .franchises {
+    margin-left: 18px;
+    margin-right: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .ul-cards {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .footer {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+}
+
+/* ==========================================================================
+   11. Tablet / Laptop Compacto (781px - 1100px)
+   ========================================================================== */
+@media (min-width: 781px) and (max-width: 1100px) {
+  .header {
+    gap: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .nav {
+    gap: 22px;
+  }
+
+  .top-block {
+    column-gap: 25px;
+  }
+
+  .intro-copy {
+    padding-left: 25px;
+  }
+
+  .intro-copy h1 {
+    font-size: clamp(38px, 4.5vw, 52px);
+  }
+
+  .solution-links {
+    padding-right: 10px;
+  }
+
+  .solution-title {
+    font-size: 21px;
+  }
+
+  .solution-card p {
+    font-size: 14px;
+  }
+
+  .booking {
+    grid-template-columns: 80px minmax(0, 1fr) auto;
+    gap: 15px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 20px 13px;
+  }
+
+  .booking-icon {
+    justify-content: flex-start;
+    padding-right: 13px;
+  }
+
+  .booking-icon .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .booking .button {
+    min-width: 222px;
+  }
+
+  .booking-body h2 {
+    font-size: 25px;
+  }
+
+  .booking-body p {
+    font-size: 16px;
+  }
+
+  .row-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .steps {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 18px 13px;
+    grid-template-columns: 205px repeat(3, minmax(0, 1fr));
+  }
+
+  .step {
+    gap: 10px;
+    padding-left: 13px;
+    padding-right: 8px;
+  }
+
+  .tech,
+  .franchises {
+    grid-template-columns: 205px minmax(0, 1fr) 210px;
+    gap: 20px;
+  }
+
+  .franchises {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .ul-cards {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .footer {
+    grid-template-columns: 185px 150px repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .footer-desc {
+    padding-left: 20px;
+  }
+}
+
+/* Ajuste específico para anchos entre 781px y 820px */
+@media (min-width: 781px) and (max-width: 820px) {
+  .header {
+    gap: 8px;
+  }
+
+  .header .logo {
+    width: 132px;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .nav a,
+  .nav details summary {
+    font-size: 13px;
+  }
+
+  .nav-book {
+    font-size: 13px;
+    padding: 9px 11px;
+    gap: 7px;
+  }
+}
+
+/* ==========================================================================
+   12. Mobile Responsive (<= 780px)
+   ========================================================================== */
+@media (max-width: 780px) {
+  html {
+    scroll-padding-top: 85px;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .site {
+    box-shadow: none;
+    padding: 0;
+    max-width: none;
+  }
+
+  .header {
+    height: 79px;
+    min-height: 79px;
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 40;
+  }
+
+  .logo {
+    width: 128px;
+  }
+
+  .nav,
+  .nav-book {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-toggle .icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    padding: 12px 20px 22px;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mobile-menu.open {
+    display: flex;
+  }
+
+  .mobile-menu a {
+    padding: 14px 9px;
+    border-bottom: 1px solid #eceef1;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .mobile-menu a.button {
+    margin-top: 15px;
+    color: white;
+    border-bottom: 0;
+  }
+
+  .top-block {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "intro"
+      "booking"
+      "solutions";
+    gap: 20px;
+    padding: 25px 19px 0;
+  }
+
+  .intro-copy {
+    padding: 0;
+  }
+
+  .intro-copy h1 {
+    font-size: clamp(31px, 8.1vw, 42px);
+    letter-spacing: -1.38px;
+    line-height: 1.055;
+    margin: 0 0 15px;
+    font-weight: 810;
+  }
+
+  .lead {
+    font-size: 16px;
+    line-height: 1.35;
+    letter-spacing: -0.2px;
+    margin: 0;
+  }
+
+  .hero-actions {
+    display: none;
+  }
+
+  .booking {
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr);
+    column-gap: 12px;
+    row-gap: 10px;
+    padding: 17px 14px 15px;
+    border-radius: 13px;
+    margin: 0;
+  }
+
+  .booking-icon {
+    border: 0;
+    height: auto;
+    padding: 0;
+    align-self: start;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .booking-icon .icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .booking-body h2 {
+    font-size: 21px;
+    letter-spacing: -0.65px;
+    line-height: 1.08;
+    margin: 0 0 10px;
+  }
+
+  .booking-body p {
+    font-size: 14px;
+    line-height: 1.38;
+  }
+
+  .booking .button {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    min-height: 43px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-top: 1px;
+  }
+
+  .booking .button .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .solution-links {
+    gap: 12px;
+    padding: 0 6px;
+  }
+
+  .solution-card {
+    grid-template-columns: 5px minmax(0, 1fr) 23px;
+    gap: 13px;
+    padding: 13px 12px;
+    min-height: 84px;
+    border-radius: 12px;
+  }
+
+  .solution-card+.solution-card {
+    padding-top: 13px;
+  }
+
+  .solution-bar {
+    width: 5px;
+    max-height: 63px;
+  }
+
+  .solution-title {
+    font-size: 20px;
+    gap: 7px;
+    letter-spacing: -0.55px;
+  }
+
+  .solution-title img {
+    width: 24px;
+  }
+
+  .solution-card p {
+    font-size: 13.5px;
+    margin: 4px 0 0;
+    line-height: 1.33;
+  }
+
+  .solution-arrow {
+    width: 22px;
+    height: 22px;
+  }
+
+  .row-section,
+  .steps,
+  .ul-cards {
+    margin-left: 19px;
+    margin-right: 19px;
+  }
+
+  .row-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    min-height: 0;
+    padding: 20px 5px;
+  }
+
+  .row-section h2,
+  .steps h2 {
+    font-size: 24px;
+    letter-spacing: -0.65px;
+  }
+
+  .row-section p {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .about {
+    margin-top: 2px;
+    border-top: 1px solid var(--line);
+  }
+
+  .about p {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    padding: 22px 20px;
+    margin-top: 2px;
+  }
+
+  .step {
+    border-left: 0;
+    border-top: 1px solid rgba(0, 34, 71, 0.20);
+    padding: 13px 0 0;
+    gap: 16px;
+  }
+
+  .step .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .step b {
+    font-size: 15px;
+  }
+
+  .step small {
+    font-size: 13px;
+  }
+
+  .tech,
+  .franchises {
+    gap: 10px;
+    min-height: 0;
+    padding: 22px 5px;
+  }
+
+  .tech h2,
+  .franchises h2 {
+    max-width: none;
+  }
+
+  .tech .button,
+  .franchises .button {
+    align-self: flex-start;
+    justify-self: auto;
+    margin-top: 4px;
+    font-size: 14px;
+  }
+
+  .franchises {
+    padding: 22px 20px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 23px 15px;
+    margin: 26px 19px 0;
+    padding: 23px 2px 90px;
+  }
+
+  .footer .logo {
+    width: 132px;
+  }
+
+  .footer-desc {
+    border-left: 0;
+    padding: 0;
+    font-size: 12px;
+    min-height: 0;
+  }
+
+  .footer-col {
+    font-size: 13px;
+  }
+
+  .footnote {
+    display: none;
+  }
+
+  .mobile-bottom-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 25;
+    padding: 10px 17px max(10px, env(safe-area-inset-bottom));
+    background: linear-gradient(0deg, #fff 86%, rgba(255, 255, 255, 0.88));
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .mobile-bottom-cta .button {
+    width: 100%;
+    min-height: 47px;
+  }
+
+  .mobile-bottom-cta .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ==========================================================================
+   13. Pantallas muy pequeñas (<= 350px)
+   ========================================================================== */
+@media (max-width: 350px) {
+  .intro-copy h1 {
+    font-size: 28px;
+  }
+
+  .solution-title {
+    font-size: 17px;
+  }
+
+  .booking-body h2 {
+    font-size: 19px;
+  }
+
+  .booking-body p {
+    font-size: 13px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ==========================================================================
+   14. Preferencias de Movimiento Reducido
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button,
+  .solution-arrow {
+    transition: none;
+  }
+}
