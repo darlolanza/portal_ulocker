@@ -268,12 +268,16 @@ main {
 .top-block {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-  grid-template-areas:
-    "intro solutions"
-    "booking booking";
+  grid-template-areas: "intro solutions";
   column-gap: 55px;
   row-gap: 24px;
-  padding: 47px 0 9px;
+  padding: 44px 0 34px;
+  border-left: 1.5px solid var(--orange);
+  border-right: 1.5px solid var(--orange);
+  border-bottom: 1.5px solid var(--orange);
+  border-top: none;
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 24px;
 }
 
 .intro-copy {
@@ -404,7 +408,6 @@ main {
    7. Bloque de Reserva (Booking)
    ========================================================================== */
 .booking {
-  grid-area: booking;
   display: grid;
   grid-template-columns: 94px 1fr auto;
   align-items: center;
@@ -412,7 +415,7 @@ main {
   border-radius: var(--radius);
   background: var(--orange-soft);
   padding: 23px 24px 24px 34px;
-  margin: 0;
+  margin: 0 0 24px;
   scroll-margin-top: 95px;
 }
 
@@ -1228,10 +1231,11 @@ main {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "intro"
-      "booking"
       "solutions";
     gap: 20px;
-    padding: 25px 19px 0;
+    padding: 25px 19px 24px;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 24px;
   }
 
   .intro-copy {
