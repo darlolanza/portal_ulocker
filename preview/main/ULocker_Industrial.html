@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#002247">
+    <meta name="description" content="ULocker Industrial — Soluciones modulares de guardado para empresas e instituciones.">
+    <title>ULocker Industrial — Soluciones de guardado para operaciones</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Estilos compartidos -->
+    <link rel="stylesheet" href="css/solutions.css">
+    <!-- Script interactivo -->
+    <script src="js/solutions.js" defer></script>
+  </head>
+  <body class="industrial">
+    <div class="topline">
+    </div>
+    <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+          <path d="M4 12h16m-7-7 7 7-7 7"/>
+        </symbol>
+        <symbol id="i-bag" viewBox="0 0 24 24">
+          <rect x="4" y="7" width="16" height="14" rx="1.5"/>
+          <path d="M9 7V5a3 3 0 0 1 6 0v2M8 7v14m8-14v14"/>
+        </symbol>
+        <symbol id="i-calendar" viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="16" rx="2"/>
+          <path d="M7 3v4m10-4v4M3 10h18"/>
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24">
+          <path d="m12 2 9 4v6c0 5.5-3.7 8.7-9 10-5.3-1.3-9-4.5-9-10V6l9-4Z"/>
+          <path d="m8.5 12.5 2.5 2.5 5-5"/>
+        </symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3.5 2"/>
+        </symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24">
+          <rect x="4" y="10" width="16" height="12" rx="2"/>
+          <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+        </symbol>
+        <symbol id="i-location" viewBox="0 0 24 24">
+          <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24">
+          <path d="m4 12 5 5L20 6"/>
+        </symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24">
+          <path d="m12 2 10 5-10 5L2 7l10-5ZM2 12l10 5 10-5M2 17l10 5 10-5"/>
+        </symbol>
+        <symbol id="i-tools" viewBox="0 0 24 24">
+          <path d="M13 6a5 5 0 0 0 6 6l-7.5 7.5a3 3 0 0 1-4-4L15 8a5 5 0 0 0-6-6 5 5 0 0 0 4 4Z"/>
+        </symbol>
+        <symbol id="i-grid" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m3 6 9 7 9-7"/>
+        </symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24">
+          <rect x="8" y="8" width="13" height="13" rx="2"/>
+          <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>
+        </symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 24 24">
+          <path d="M5 5 19 19M19 5 5 19"/>
+        </symbol>
+        <symbol id="i-monitor" viewBox="0 0 24 24">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M8 21h8m-4-4v4"/>
+        </symbol>
+        <symbol id="i-scan" viewBox="0 0 24 24">
+          <path d="M4 9V5a1 1 0 0 1 1-1h4m6 0h4a1 1 0 0 1 1 1v4M4 15v4a1 1 0 0 0 1 1h4m6 0h4a1 1 0 0 0 1-1v-4M7 12h10"/>
+        </symbol>
+        <symbol id="i-heart" viewBox="0 0 24 24">
+          <path d="M20 5a5 5 0 0 0-7 0l-1 1-1-1a5 5 0 0 0-7 7l8 8 8-8a5 5 0 0 0 0-7Z"/>
+        </symbol>
+      </defs>
+    </svg>
+    <header class="header">
+      <div class="shell navrow">
+        <a class="brand" href="index.html" aria-label="ULocker — Volver al inicio"><img src="img/logo.png" alt="U LOCKER — marca oficial de siete módulos"><span class="branch">INDUSTRIAL</span></a>
+        <nav class="navlinks" aria-label="Navegación principal">
+          <a href="#aplicaciones">Aplicaciones</a><a href="#capacidades">Capacidades</a><a href="#proceso">Cómo trabajamos</a><a href="#contacto">Contacto</a><a class="btn" href="#contacto">Plantear un proyecto
+          <svg class="ico " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg>
+        </a>
+      </nav>
+      <button class="menu-button" type="button" data-menu-button aria-label="Abrir menú" aria-controls="menuMovil" aria-expanded="false">
+        <svg class="ico " aria-hidden="true">
+          <use href="#i-menu"></use>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav shell" data-mobile-nav id="menuMovil" aria-label="Navegación móvil">
+      <a href="#aplicaciones">Aplicaciones</a><a href="#capacidades">Capacidades</a><a href="#proceso">Cómo trabajamos</a><a href="#contacto">Contacto</a><a class="btn" href="#contacto">Plantear un proyecto
+      <svg class="ico " aria-hidden="true">
+        <use href="#i-arrow"></use>
+      </svg>
+    </a>
+  </nav>
+</header>
+<main id="inicio">
+  <div class="shell">
+    <section class="intro" aria-labelledby="titulo">
+      <div>
+        <div class="eyebrow">
+          ULOCKER Industrial · Empresas e instituciones
+        </div>
+        <h1 id="titulo">
+          Soluciones de guardado para <em>tu operación.</em>
+        </h1>
+        <p class="lead">
+          Exploramos y desarrollamos sistemas de lockers inteligentes para contextos donde el orden, el acceso y la administración del espacio importan. Cada implementación empieza por entender la necesidad real.
+        </p>
+        <div class="actions">
+          <a class="btn" href="#contacto">Conversar un proyecto
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-arrow"></use>
+            </svg>
+          </a><a class="btn ghost" href="#aplicaciones">Explorar aplicaciones</a>
+        </div>
+        <div class="supportline">
+          <span>
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-check"></use>
+            </svg>
+            Desarrollo nacional</span><span>
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-check"></use>
+            </svg>
+            Enfoque modular</span><span>
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-check"></use>
+            </svg>
+            Evaluación por proyecto</span>
+          </div>
+        </div>
+        <div class="visual">
+          <div class="visual-label">
+            SISTEMA / MODULAR
+          </div>
+          <div class="locker-illustration" aria-label="Diagrama conceptual de módulos de lockers">
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door featured">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="screen">
+              <svg class="ico " aria-hidden="true">
+                <use href="#i-grid"></use>
+              </svg>
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+          </div>
+          <div class="visual-bottom">
+            <span>Orden · Acceso · Escalabilidad</span><span>02 / INDUSTRIAL</span>
+          </div>
+        </div>
+      </section>
+      <section class="slim-band">
+        <svg class="ico band-icon" aria-hidden="true">
+          <use href="#i-layers"></use>
+        </svg>
+        <div>
+          <h2>
+            Una solución comienza con un requerimiento.
+          </h2>
+          <p>
+            Contanos qué necesitás guardar, quién debe acceder y en qué entorno funcionaría el sistema.
+          </p>
+        </div>
+        <a class="btn" href="#contacto">Iniciar consulta
+          <svg class="ico " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg>
+        </a>
+      </section>
+      <section class="section" id="aplicaciones">
+        <div class="sectionhead">
+          <div>
+            <div class="eyebrow">
+              Posibles escenarios
+            </div>
+            <h2>
+              Diseñados para contextos reales.
+            </h2>
+          </div>
+          <p class="small">
+            Ámbitos de aplicación a evaluar, no un catálogo de implementaciones ya aprobadas.
+          </p>
+        </div>
+        <div class="use-cases">
+          <article class="case">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-lock"></use>
+            </svg>
+            <div>
+              <h3>
+                Empresas y espacios de trabajo
+              </h3>
+              <p>
+                Guardado organizado de pertenencias, herramientas o equipamiento, según las condiciones de cada operación.
+              </p>
+            </div>
+          </article>
+          <article class="case">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-heart"></use>
+            </svg>
+            <div>
+              <h3>
+                Gimnasios y centros deportivos
+              </h3>
+              <p>
+                Soluciones de acceso y uso de casilleros integrables al recorrido de socios, sujetas a factibilidad.
+              </p>
+            </div>
+          </article>
+          <article class="case">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-grid"></use>
+            </svg>
+            <div>
+              <h3>
+                Instituciones e infraestructura
+              </h3>
+              <p>
+                Alternativas para espacios compartidos que requieren trazabilidad y reglas de acceso.
+              </p>
+            </div>
+          </article>
+          <article class="case">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-tools"></use>
+            </svg>
+            <div>
+              <h3>
+                Operaciones especiales
+              </h3>
+              <p>
+                Necesidades de guarda y entrega de equipamiento que se estudian según tamaño, seguridad y flujo.
+              </p>
+            </div>
+          </article>
+        </div>
+        <p class="notice">
+          <strong>Alcance:</strong> los escenarios anteriores se presentan como líneas de exploración comercial y técnica. La disponibilidad de funciones, integraciones e instalación se define caso por caso.
+        </p>
+      </section>
+      <section class="section" id="capacidades">
+        <div class="sectionhead">
+          <div>
+            <div class="eyebrow">
+              Criterio de producto
+            </div>
+            <h2>
+              Una base. Distintas configuraciones.
+            </h2>
+          </div>
+          <p class="small">
+            La línea Industrial comparte la arquitectura de marca de ULocker y adopta un lenguaje sobrio vinculado con diseño, ingeniería y operación.
+          </p>
+        </div>
+        <div class="cards">
+          <article class="info-card">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-layers"></use>
+            </svg>
+            <h3>
+              Arquitectura modular
+            </h3>
+            <p>
+              La configuración física se estudia según capacidad, dimensiones, entorno y frecuencia de uso.
+            </p>
+          </article>
+          <article class="info-card">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-shield"></use>
+            </svg>
+            <h3>
+              Acceso y control
+            </h3>
+            <p>
+              Se evalúan los requisitos de identificación, seguridad y administración del sistema para cada caso.
+            </p>
+          </article>
+          <article class="info-card">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-monitor"></use>
+            </svg>
+            <h3>
+              Electrónica y experiencia
+            </h3>
+            <p>
+              El proyecto integra diseño físico, electrónica e interfaz. Las capacidades concretas requieren validación.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="section" id="proceso">
+        <div class="sectionhead">
+          <div>
+            <div class="eyebrow">
+              Metodología
+            </div>
+            <h2>
+              De la necesidad a la propuesta.
+            </h2>
+          </div>
+          <p class="small">
+            Sin paquetes cerrados que no respondan al contexto.
+          </p>
+        </div>
+        <div class="process">
+          <article>
+            <b>01 / ESCUCHA</b>
+            <h3>
+              Relevamiento
+            </h3>
+            <p>
+              Entendemos el flujo, el lugar y los usuarios.
+            </p>
+          </article>
+          <article>
+            <b>02 / ANÁLISIS</b>
+            <h3>
+              Factibilidad
+            </h3>
+            <p>
+              Evaluamos infraestructura, seguridad y alcance.
+            </p>
+          </article>
+          <article>
+            <b>03 / DISEÑO</b>
+            <h3>
+              Propuesta
+            </h3>
+            <p>
+              Definimos alternativas sujetas a revisión técnica y comercial.
+            </p>
+          </article>
+          <article>
+            <b>04 / PRUEBA</b>
+            <h3>
+              Validación
+            </h3>
+            <p>
+              Planificamos pruebas antes de comprometer resultados.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="section">
+        <div class="split">
+          <div class="region">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-grid"></use>
+            </svg>
+            <div class="large" style="font-size:clamp(39px,5vw,61px)">
+              Hecho para<br>evolucionar.
+            </div>
+            <p class="small">
+              Modularidad, continuidad visual y una experiencia pensada desde el uso.
+            </p>
+          </div>
+          <div>
+            <div class="eyebrow">
+              Identidad ULocker
+            </div>
+            <h2>
+              La misma marca. Otro lenguaje.
+            </h2>
+            <p style="font-size:16px;color:#52606f">
+              Industrial es una extensión de ULocker, no una empresa separada. El azul profundo comunica rigor técnico y los recursos modulares mantienen la relación con la marca matriz.
+            </p>
+            <ul class="list-check">
+              <li>
+                <svg class="ico " aria-hidden="true">
+                  <use href="#i-check"></use>
+                </svg>
+                Azul institucional <code>#002247</code> como color principal.
+              </li>
+              <li>
+                <svg class="ico " aria-hidden="true">
+                  <use href="#i-check"></use>
+                </svg>
+                Naranja Travel <code>#E8501D</code> como vínculo de origen.
+              </li>
+              <li>
+                <svg class="ico " aria-hidden="true">
+                  <use href="#i-check"></use>
+                </svg>
+                Documentación técnica y diseño visual sujetos a validación.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="contacto">
+        <div class="contactbox">
+          <div class="eyebrow">
+            Primer contacto
+          </div>
+          <h2>
+            Contanos qué necesitás resolver.
+          </h2>
+          <p>
+            Completá este breve resumen para preparar tu consulta. Este prototipo funciona sin servidor: al pulsar «Copiar consulta» no se envían datos y podrás pegar el texto en tu correo o mensaje.
+          </p>
+          <form class="copyform" data-consult-form>
+            <div class="pair">
+              <label>Nombre<input name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required></label><label>Correo<input name="email" type="email" autocomplete="email" placeholder="vos@empresa.com" required></label>
+            </div>
+            <div class="pair">
+              <label>Empresa u organización<input name="empresa" type="text" placeholder="Nombre de la organización" required></label><label>Ámbito de aplicación<select name="ambito" required><option value="">Seleccioná una opción</option><option>Empresa / trabajo</option><option>Gimnasio / deporte</option><option>Institución / infraestructura</option><option>Operación especial</option><option>Otro</option></select></label>
+            </div>
+            <label>¿Qué necesitás gestionar o guardar?<textarea name="necesidad" placeholder="Contanos brevemente el contexto, cantidad de usuarios y necesidad principal…" required></textarea></label>
+            <div class="form-footer">
+              <button type="submit" class="btn">
+                <svg class="ico " aria-hidden="true">
+                  <use href="#i-copy"></use>
+                </svg>
+                Copiar consulta</button><a class="btn ghost" href="https://ulocker.ar" target="_blank" rel="noopener">Ir al sitio oficial
+                <svg class="ico " aria-hidden="true">
+                  <use href="#i-arrow"></use>
+                </svg>
+              </a><span class="status" data-status aria-live="polite"></span>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="section" id="preguntas">
+        <div class="faq">
+          <div>
+            <div class="eyebrow">
+              Criterio de evaluación
+            </div>
+            <h2>
+              Preguntas frecuentes.
+            </h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>
+                ¿ULocker Industrial es un producto estándar?
+              </summary>
+              <p>
+                La línea se encuentra en desarrollo conceptual y técnico. El alcance de cada solución se define mediante relevamiento y validación antes de ofrecer compromisos comerciales.
+              </p>
+            </details>
+            <details>
+              <summary>
+                ¿Puede integrarse con otros sistemas?
+              </summary>
+              <p>
+                Las integraciones son una posibilidad a evaluar. No se da por aprobada ninguna compatibilidad, API o función sin revisión técnica específica.
+              </p>
+            </details>
+            <details>
+              <summary>
+                ¿Ofrecen fabricación e instalación?
+              </summary>
+              <p>
+                El diseño, la fabricación, los plazos y las condiciones de implementación requieren evaluación y presupuesto individual; no constituyen un compromiso general.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section class="final-cta">
+        <div>
+          <h2>
+            Tu operación merece una solución bien pensada.
+          </h2>
+          <p>
+            Empecemos por conocer el problema, no por vender una configuración cerrada.
+          </p>
+        </div>
+        <a class="btn" href="#contacto">Presentar mi necesidad
+          <svg class="ico " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg>
+        </a>
+      </section>
+    </div>
+  </main>
+  <footer class="shell footer">
+    <a href="index.html" aria-label="Sitio oficial de ULocker"><img src="img/logo.png" alt="U LOCKER"></a>
+    <div class="footer-links">
+      <a href="#inicio">Volver arriba</a><a href="https://ulocker.ar" target="_blank" rel="noopener">Sitio oficial</a><a href="index.html">ULocker · Portal</a>
+    </div>
+    <p class="legal">
+      Prototipo de presentación · INDUSTRIAL. Los contenidos comerciales y técnicos requieren validación antes de su publicación.
+    </p>
+  </footer>
+</body>
+</html>

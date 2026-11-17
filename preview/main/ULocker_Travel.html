@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#E8501D">
+    <meta name="description" content="ULocker Travel — Guardá tu equipaje en Ushuaia con autonomía y libertad.">
+    <title>ULocker Travel — Guardá tu equipaje y disfrutá Ushuaia</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Estilos compartidos -->
+    <link rel="stylesheet" href="css/solutions.css">
+    <!-- Script interactivo -->
+    <script src="js/solutions.js" defer></script>
+  </head>
+  <body class="travel">
+    <div class="topline">
+    </div>
+    <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+          <path d="M4 12h16m-7-7 7 7-7 7"/>
+        </symbol>
+        <symbol id="i-bag" viewBox="0 0 24 24">
+          <rect x="4" y="7" width="16" height="14" rx="1.5"/>
+          <path d="M9 7V5a3 3 0 0 1 6 0v2M8 7v14m8-14v14"/>
+        </symbol>
+        <symbol id="i-calendar" viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="16" rx="2"/>
+          <path d="M7 3v4m10-4v4M3 10h18"/>
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24">
+          <path d="m12 2 9 4v6c0 5.5-3.7 8.7-9 10-5.3-1.3-9-4.5-9-10V6l9-4Z"/>
+          <path d="m8.5 12.5 2.5 2.5 5-5"/>
+        </symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3.5 2"/>
+        </symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24">
+          <rect x="4" y="10" width="16" height="12" rx="2"/>
+          <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+        </symbol>
+        <symbol id="i-location" viewBox="0 0 24 24">
+          <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24">
+          <path d="m4 12 5 5L20 6"/>
+        </symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24">
+          <path d="m12 2 10 5-10 5L2 7l10-5ZM2 12l10 5 10-5M2 17l10 5 10-5"/>
+        </symbol>
+        <symbol id="i-tools" viewBox="0 0 24 24">
+          <path d="M13 6a5 5 0 0 0 6 6l-7.5 7.5a3 3 0 0 1-4-4L15 8a5 5 0 0 0-6-6 5 5 0 0 0 4 4Z"/>
+        </symbol>
+        <symbol id="i-grid" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m3 6 9 7 9-7"/>
+        </symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24">
+          <rect x="8" y="8" width="13" height="13" rx="2"/>
+          <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>
+        </symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 24 24">
+          <path d="M5 5 19 19M19 5 5 19"/>
+        </symbol>
+        <symbol id="i-monitor" viewBox="0 0 24 24">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M8 21h8m-4-4v4"/>
+        </symbol>
+        <symbol id="i-scan" viewBox="0 0 24 24">
+          <path d="M4 9V5a1 1 0 0 1 1-1h4m6 0h4a1 1 0 0 1 1 1v4M4 15v4a1 1 0 0 0 1 1h4m6 0h4a1 1 0 0 0 1-1v-4M7 12h10"/>
+        </symbol>
+        <symbol id="i-heart" viewBox="0 0 24 24">
+          <path d="M20 5a5 5 0 0 0-7 0l-1 1-1-1a5 5 0 0 0-7 7l8 8 8-8a5 5 0 0 0 0-7Z"/>
+        </symbol>
+      </defs>
+    </svg>
+    <header class="header">
+      <div class="shell navrow">
+        <a class="brand" href="index.html" aria-label="ULocker — Volver al inicio"><img src="img/logo.png" alt="U LOCKER — marca oficial de siete módulos"><span class="branch">TRAVEL</span></a>
+        <nav class="navlinks" aria-label="Navegación principal">
+          <a href="#como">Cómo funciona</a><a href="#beneficios">Beneficios</a><a href="#ushuaia">Ushuaia</a><a href="#preguntas">Preguntas</a><a class="btn" href="https://ulocker.ar">Reservar locker
+          <svg class="ico " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg>
+        </a>
+      </nav>
+      <button class="menu-button" type="button" data-menu-button aria-label="Abrir menú" aria-controls="menuMovil" aria-expanded="false">
+        <svg class="ico " aria-hidden="true">
+          <use href="#i-menu"></use>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav shell" data-mobile-nav id="menuMovil" aria-label="Navegación móvil">
+      <a href="#como">Cómo funciona</a><a href="#beneficios">Beneficios</a><a href="#ushuaia">Ushuaia</a><a href="#preguntas">Preguntas</a><a class="btn" href="https://ulocker.ar">Reservar locker
+      <svg class="ico " aria-hidden="true">
+        <use href="#i-arrow"></use>
+      </svg>
+    </a>
+  </nav>
+</header>
+<main id="inicio">
+  <div class="shell">
+    <section class="intro" aria-labelledby="titulo">
+      <div>
+        <div class="eyebrow">
+          ULOCKER Travel · Ushuaia
+        </div>
+        <h1 id="titulo">
+          Tu equipaje guardado.<br><em>Tu día, libre.</em>
+        </h1>
+        <p class="lead">
+          Llegaste temprano, te vas más tarde o querés recorrer sin cargar valijas. Guardá tu equipaje en lockers de autoservicio y seguí disfrutando Ushuaia a tu manera.
+        </p>
+        <div class="actions">
+          <a class="btn" href="https://ulocker.ar" target="_blank" rel="noopener">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-calendar"></use>
+            </svg>
+            Reservar mi locker
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-arrow"></use>
+            </svg>
+          </a><a class="btn ghost" href="#como">Cómo funciona</a>
+        </div>
+        <div class="supportline">
+          <span>
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-check"></use>
+            </svg>
+            Autoservicio 24/7</span><span>
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-check"></use>
+            </svg>
+            Acceso por código</span><span>
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-check"></use>
+            </svg>
+            Reserva online</span>
+          </div>
+        </div>
+        <div class="visual">
+          <div class="visual-label">
+            LIBERÁ TU VIAJE
+          </div>
+          <div class="locker-illustration" aria-label="Ilustración conceptual de lockers">
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door featured">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="screen">
+              <svg class="ico " aria-hidden="true">
+                <use href="#i-lock"></use>
+              </svg>
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+            <div class="door">
+            </div>
+          </div>
+          <div class="visual-bottom">
+            <span>Menos equipaje. Más Ushuaia.</span><span>01 / TRAVEL</span>
+          </div>
+        </div>
+      </section>
+      <section class="slim-band" aria-labelledby="reservaTitle">
+        <svg class="ico band-icon" aria-hidden="true">
+          <use href="#i-bag"></use>
+        </svg>
+        <div>
+          <h2 id="reservaTitle">
+            ¿Necesitás guardar tu equipaje?
+          </h2>
+          <p>
+            Reservá un locker en Ushuaia y disfrutá tu tiempo con libertad. Disponible las 24 horas.
+          </p>
+        </div>
+        <a class="btn" href="https://ulocker.ar" target="_blank" rel="noopener">Reservar ahora
+          <svg class="ico " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg>
+        </a>
+      </section>
+      <section class="section" id="beneficios">
+        <div class="sectionhead">
+          <div>
+            <div class="eyebrow">
+              Simple, desde el primer minuto
+            </div>
+            <h2>
+              Que tus planes sigan.
+            </h2>
+          </div>
+          <p class="small">
+            La propuesta Travel está pensada para resolver un problema concreto: qué hacer con tus valijas mientras disfrutás del destino.
+          </p>
+        </div>
+        <div class="cards">
+          <article class="info-card">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-clock"></use>
+            </svg>
+            <h3>
+              A tu ritmo
+            </h3>
+            <p>
+              Sin depender de horarios de atención: servicio de autoservicio disponible las 24 horas.
+            </p>
+          </article>
+          <article class="info-card">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-lock"></use>
+            </svg>
+            <h3>
+              Acceso sencillo
+            </h3>
+            <p>
+              Con tu reserva confirmada, recibís por correo la información necesaria para acceder.
+            </p>
+          </article>
+          <article class="info-card">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-bag"></use>
+            </svg>
+            <h3>
+              Viajá más liviano
+            </h3>
+            <p>
+              Dejá el equipaje guardado mientras aprovechás excursiones, paseos o tus últimas horas en la ciudad.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="section" id="como">
+        <div class="sectionhead">
+          <div>
+            <div class="eyebrow">
+              Tres pasos
+            </div>
+            <h2>
+              Cómo funciona
+            </h2>
+          </div>
+          <p class="small">
+            Sin trámites largos ni indicaciones confusas.
+          </p>
+        </div>
+        <div class="number-grid">
+          <article class="number-step">
+            <span class="num">01 / RESERVÁ</span>
+            <h3>
+              Elegí tu locker
+            </h3>
+            <p>
+              Consultá los tamaños, las tarifas y el tiempo que necesitás en el sitio de reservas.
+            </p>
+          </article>
+          <article class="number-step">
+            <span class="num">02 / ACCEDÉ</span>
+            <h3>
+              Recibí tu código
+            </h3>
+            <p>
+              Con la reserva pagada, usá los datos de acceso enviados por correo.
+            </p>
+          </article>
+          <article class="number-step">
+            <span class="num">03 / DISFRUTÁ</span>
+            <h3>
+              Guardá y seguí
+            </h3>
+            <p>
+              Dejá tus pertenencias en el locker asignado y volvé a retirarlas según tu reserva.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="section" id="ushuaia">
+        <div class="split">
+          <div class="region">
+            <svg class="ico " aria-hidden="true">
+              <use href="#i-location"></use>
+            </svg>
+            <div class="large">
+              Ushuaia.
+            </div>
+            <p class="small">
+              La ciudad más austral como punto de partida: pensá en tus planes, no en cargar las valijas.
+            </p>
+          </div>
+          <div>
+            <div class="eyebrow">
+              Estamos donde viajás
+            </div>
+            <h2>
+              Más libertad para moverte.
+            </h2>
+            <p style="color:#4d5864;font-size:16px">
+              ULocker nació para acompañar a quienes llegan y salen de Ushuaia. Ya sea antes de un check-in, después de un check-out o durante una escala, podés organizar tu recorrido sin llevar todo encima.
+            </p>
+            <ul class="list-check">
+              <li>
+                <svg class="ico " aria-hidden="true">
+                  <use href="#i-check"></use>
+                </svg>
+                Ubicaciones céntricas en Ushuaia.
+              </li>
+              <li>
+                <svg class="ico " aria-hidden="true">
+                  <use href="#i-check"></use>
+                </svg>
+                Tamaños y precios disponibles durante la reserva.
+              </li>
+              <li>
+                <svg class="ico " aria-hidden="true">
+                  <use href="#i-check"></use>
+                </svg>
+                Confirmación y acceso gestionados de forma digital.
+              </li>
+            </ul>
+            <div class="actions">
+              <a class="btn ghost" href="https://ulocker.ar" target="_blank" rel="noopener">Consultar ubicaciones y tarifas
+                <svg class="ico " aria-hidden="true">
+                  <use href="#i-arrow"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="preguntas">
+        <div class="faq">
+          <div>
+            <div class="eyebrow">
+              Respuestas útiles
+            </div>
+            <h2>
+              Antes de guardar tus valijas.
+            </h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>
+                ¿Tengo que reservar antes de entrar?
+              </summary>
+              <p>
+                Sí. Por seguridad, el acceso al local se habilita mediante una reserva abonada. Los datos de acceso se envían al correo indicado.
+              </p>
+            </details>
+            <details>
+              <summary>
+                ¿Puedo usar el locker de noche?
+              </summary>
+              <p>
+                El servicio de autoservicio está disponible las 24 horas. Revisá siempre las condiciones y el horario de tu reserva.
+              </p>
+            </details>
+            <details>
+              <summary>
+                ¿Dónde veo tamaños y precios?
+              </summary>
+              <p>
+                En <a class="inline-link" href="https://ulocker.ar" target="_blank" rel="noopener">ulocker.ar</a> podés consultar la información vigente antes de confirmar.
+              </p>
+            </details>
+            <details>
+              <summary>
+                ¿Qué pasa si necesito ayuda?
+              </summary>
+              <p>
+                Consultá la sección de asistencia y las condiciones del servicio en el sitio oficial, donde están los canales operativos actualizados.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section class="final-cta">
+        <div>
+          <h2>
+            Vos disfrutá Ushuaia.<br>Del equipaje nos ocupamos acá.
+          </h2>
+          <p>
+            Elegí el tamaño y el tiempo que necesitás desde el portal de reservas.
+          </p>
+        </div>
+        <a class="btn" href="https://ulocker.ar" target="_blank" rel="noopener">Reservar mi locker
+          <svg class="ico " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg>
+        </a>
+      </section>
+    </div>
+  </main>
+  <footer class="shell footer">
+    <a href="index.html" aria-label="Sitio oficial de ULocker"><img src="img/logo.png" alt="U LOCKER"></a>
+    <div class="footer-links">
+      <a href="#inicio">Volver arriba</a><a href="https://ulocker.ar" target="_blank" rel="noopener">Sitio oficial</a><a href="index.html">ULocker · Portal</a>
+    </div>
+    <p class="legal">
+      Prototipo de presentación · TRAVEL. Los contenidos comerciales y técnicos requieren validación antes de su publicación.
+    </p>
+  </footer>
+</body>
+</html>
