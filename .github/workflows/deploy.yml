@@ -15,12 +15,23 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Deploy to gh-pages branch
+      # Despliegue en la raíz cuando es la rama principal (main)
+      - name: Deploy to gh-pages branch (Production)
+        if: github.ref_name == 'main'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: .
-          target-folder: ${{ github.ref_name == 'main' && '' || format('preview/{0}', github.ref_name) }}
+          clean: false
+
+      # Despliegue en subcarpeta cuando es una rama de desarrollo/preview
+      - name: Deploy to gh-pages branch (Preview)
+        if: github.ref_name != 'main'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: .
+          target-folder: preview/${{ github.ref_name }}
           clean: false
 
       - name: Mostrar enlace en el resumen
